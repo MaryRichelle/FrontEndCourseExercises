@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fundamentals-3-quiz</title>
+</head>
+
+<body>
+    <h1>Functions</h1>
+    <script>
+
+        // 1) Type of function?  Regular function
+        function add7(a, b) {
+        return result = a + b;
+            
+        }
+        console.log(add7(7, 5));
+        // 2) Type of function? Function exoression
+        const multiply = function (number1, number2) {
+            let product = number1 * number2;
+            console.log(product)
+        };
+        multiply(5, 2)
+
+        // 3) Type of function? Arrow function
+        let capitalize = () => {
+            const cap = "uppercase";
+            let doUpper = cap.charAt(0).toUpperCase() + cap.slice(1);
+            console.log(doUpper);
+        }
+        capitalize();
+
+        // 4) Type of function? function Decleration
+        function lastLetter(letter) {
+            return(letter.slice(letter.length - 1));
+        
+        }
+        console.log(lastLetter("mary"));
+
+    </script>
+</body>
+
+</html>
