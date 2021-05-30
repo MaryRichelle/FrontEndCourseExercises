@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object constructors</title>
+</head>
+<body>
+    
+
+    <script >
+        // books constructor
+        function  Book(title, author, pages, status){
+   this.title = title;
+   this.author = author;
+   this.pages = pages;
+   this.status = status;
+  
+}
+Book.prototype.info = function(){
+    console.log(`${this.title} by ${this.author} pages${this.pages}, ${this.status}` );
+}
+const upAndGoing = new Book("up and Going","Kyle Simposon", 72 , "not yet read" )
+upAndGoing.info();
+const thisAndObject = new Book("This and Object Prototypes","Kyle Simposon", 200 , "not yet read" )
+thisAndObject.info();
+
+
+
+// accounts
+function Account(name, IBAN){
+    this.name= name;
+    this.IBAN = IBAN;
+    this.balance = 0;
+
+}
+
+Account.prototype.getBalance = function(amount){
+    this.balance += amount;
+    console.log(`your current balance is ${this.balance}`);
+}
+Account.prototype.deposit = function(amount){
+    this.balance  += amount ;
+  console.log(  "you deposit " + amount, " your new balance is " + this.balance++ );
+  
+}
+Account.prototype.withdraw = function(amount){
+   if( amount < 0 || typeof amount !== "number") {
+     console.log( "invalid transaction" );
+    } if(amount > this.balance){
+        console.log("insufficient Balance");
+    }
+        else{
+    this.balance  -= amount ;
+    console.log(`you withdraw  ${amount} your new balance is ${this.balance--}`);
+}
+
+}
+
+
+const newAccount = new Account(" mary", 45687865958 );
+console.log(newAccount );
+newAccount.getBalance(22255) ;
+newAccount.deposit(50)
+newAccount.withdraw(2545)
+const savingAccount = new Account(" Raysh ", 25858555,);
+console.log(savingAccount);
+savingAccount.getBalance(55555);
+savingAccount.deposit(2200);
+savingAccount.withdraw(1010)
+
+
+    </script>
+</body>
+</html>
