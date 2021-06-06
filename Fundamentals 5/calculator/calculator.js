@@ -1,24 +1,40 @@
-function add () {
+function add (a, b) {
+	return a + b;
 	
 }
 
-function subtract () {
+function subtract ( a , b) {
+	return a - b;
 	
 }
 
-function sum () {
+function sum ( numbers ) {
+	return numbers.reduce((a, b) => {
+		return a + b;
+	}, 0);
+	
+	
 	
 }
 
-function multiply () {
+function multiply ( numbers) {
+	return numbers.reduce((a, b) => {
+		return a * b;
+	})
 	
 }
 
-function power() {
+function power(a , b) {
+	return a**b;
 	
 }
 
-function factorial() {
+function factorial( numbers) {
+	let factor = 1;
+	for (let i = 1; i <= numbers; i++) {
+		factor = i * factor;
+	}
+	return factor;
 	
 }
 
