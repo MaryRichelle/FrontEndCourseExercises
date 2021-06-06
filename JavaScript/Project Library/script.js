@@ -7,12 +7,14 @@ const bookStatus = document.querySelector("#status");
 
 let myLibrary = [];
 let serialNum = 1;
-function Book(detail) {
+class Book {
+  constructor(detail){
   this.serial = detail.serial;
   this.title = detail.title;
   this.author = detail.author;
   this.pages = detail.pages;
   this.status = detail.status;
+  }
 }
 
 function render() {
